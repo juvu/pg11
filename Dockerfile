@@ -12,11 +12,7 @@ RUN apt-get -y update && \
     apt-get -y install python3 python3-pip && \
     apt-get -y install postgresql-11-mysql-fdw postgresql-plpython3-11 && \
     apt-get -y install postgresql-11-postgis-2.5 postgresql-11-cron && \
-    wget http://www.xunsearch.com/scws/down/scws-1.2.3.tar.bz2 && \
-   tar xvf scws-1.2.3.tar.bz2 && \
-   cd scws-1.2.3 && \
-   ./configure && \
-   make install && \
+    
    git clone https://github.com/amutu/zhparser.git && \
    cd zhparser && make && make install && \
    wget https://codeload.github.com/postgrespro/pg_pathman/tar.gz/1.5.2-4 && \
