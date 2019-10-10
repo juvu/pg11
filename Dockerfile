@@ -11,7 +11,9 @@ RUN apt-get -y update && \
     apt-get -y install ca-certificates && \
     apt-get -y install python3 python3-pip && \
     apt-get -y install postgresql-11-mysql-fdw postgresql-plpython3-11 && \
-    apt-get -y install postgresql-11-postgis-2.5 postgresql-11-cron && \
+
+RUN git clone https://github.com/postgrespro/rum && cd rum && make USE_PGXS=1 && make USE_PGXS=1 install
+
     
    git clone https://github.com/amutu/zhparser.git && \
    cd zhparser && make && make install && \
