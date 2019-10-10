@@ -15,9 +15,10 @@ RUN apt-get -y update && \
    ./configure && \
    make install && \
    git clone https://github.com/amutu/zhparser.git && \
-   git clone https://github.com/postgrespro/rum && cd rum && make USE_PGXS=1 && make USE_PGXS=1 install && \ 
-
    cd zhparser && make && make install && \
+   
+   cd .. && git clone https://github.com/postgrespro/rum && cd rum && make USE_PGXS=1 && make USE_PGXS=1 install && \ 
+
    wget https://codeload.github.com/postgrespro/pg_pathman/tar.gz/1.5.2-4 && \
    tar -xvzf 1.5.2-4 && \
    cd pg_pathman-1.5.2-4 && make USE_PGXS=1 && make USE_PGXS=1 install && \
